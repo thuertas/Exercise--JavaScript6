@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Loops Exercise</title>
+</head>
+<body>
+<h1>JavaScript Loops Exercise</h1>
+<a href=""></a>
+<img src="" alt="">
+    <script>
+        var links = new Array();
+        links[0] = new Array();
+        links[0]["linkName"] = "W3Schools";
+        links[0]["linkLogo"] ="http://www.w3schools.com/images/w3schools.png";
+        links[0]["linkURL"] = "http://www.w3schools.com/";
+        links[0]["linkDescription"] = "W3Schools is a web developer information website, with tutorials and references relating to web development topics such as HTML, CSS, JavaScript and PHP.";
+
+        links[1] = new Array();
+        links[1]["linkName"] = "Code Academy";
+        links[1]["linkLogo"] = "";
+        links[1]["linkURL"] = "https://www.codecademy.com/";
+        links[1]["linkDescription"] = "Codecademy is an online interactive platform that offers free coding classes in 9 different programming languages.";
+
+        links[2] = new Array();
+        links[2]["linkName"] = "";
+        links[2]["linkLogo"] = "http://www.w3.org/2008/site/images/logo-w3c-mobile-lg";
+        links[2]["linkURL"] = "http://www.w3.org/";
+        links[2]["linkDescription"] = "The World Wide Web Consortium is the main international standards organization for the World Wide Web.";
+
+        for(var i = 0; i < 3; i++) {
+            var a = i +1;
+            document.write("<h3><strong> Info # " + a + "</strong></h3>")
+            if(links[i]["linkName"] != ""){
+                document.write("<p>" + links[i]["linkName"] + "</p>");
+            }
+            if(links[i]["linkLogo"] != "" && links[i]["linkURL"] != "") {
+                document.write("<a href='" + links[i]["linkURL"] + "'><img alt='image available' src='" + links[i]["linkLogo"] + "'></a>");
+            }else if(links[i]["linkLogo"] == ""){
+                document.write("<a href='" + links[i]["linkURL"] + "'>Image NOT available but click here to go to the link</a>");
+            }
+            if(links[i]["linkDescription"] != ""){
+                document.write("<p>" + links[i]["linkDescription"] + "</p>");
+            }
+        }
+    </script>
+</body>
+</html>
